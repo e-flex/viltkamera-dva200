@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block body %}
+    <div class="container">
+      <h1 class="title">Hello World</h1>
+      <ul>
+	{% for image in imageList %}
+	<li>{{ image }}<img src="{{ url_for("static", filename=image) }}" /></li>
+	{% endfor %}
+      </ul>
+    </div>
+
+{% endblock %}
+
